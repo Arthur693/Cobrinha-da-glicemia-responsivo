@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cobrinha da Glicemia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>👨‍⚕️ Cobrinha da Glicemia</h1>
+
+<div id="glycemiaBarContainer">
+  <div id="glycemiaBar"></div>
+</div>
+
+<div class="game-container">
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <!-- CONTROLES EM CRUZ -->
+  <div id="controls">
+    <button id="btn-up" class="control-btn">⬆️</button>
+    <button id="btn-left" class="control-btn">⬅️</button>
+    <div></div> <!-- espaço vazio no meio -->
+    <button id="btn-right" class="control-btn">➡️</button>
+    <button id="btn-down" class="control-btn">⬇️</button>
+  </div>
+
+  <div>
+    <div id="score">Glicemia: 100</div>
+    <div id="timer">⏱ Tempo: 0s</div>
+  </div>
+</div>
+
+<div id="startScreen">
+  <h2>Bem-vindo ao Jogo!</h2>
+  <input type="text" id="playerName" placeholder="Digite seu nome">
+  <br><br>
+  <button onclick="startGame()">Start</button>
+</div>
+
+<div id="gameOver" style="display:none;">
+  <h2>Fim de Jogo!</h2>
+  <p>A glicemia deve ficar entre 50 e 200.</p>
+  <button onclick="restartGame()">Jogar Novamente</button>
+</div>
+
+<div id="leaderboard">
+  <h3>🏆 Ranking dos Jogadores</h3>
+  <ol id="rankingList"></ol>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
